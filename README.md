@@ -18,24 +18,27 @@
 * [catchError -> similar to handle error in promise]
 * [retry -> used for error handle with catchError, execute code until specific time of error happens again]
 
-
 Example of) combineLatest and zip compare
 
 `
 endpoint_stream.combineLatest(id_stream) / only one of them is necessary -> map(data => makeRequest(data[0], data[1])
 endpoint_stream.zip(id_stream) / both of them are required -> map(data => makeRequest(data[0], data[1])
 `
+
 Example of) zip and forkJoin compare(forkJoin should be used with caution, similar to Promise.all), -> https://www.learnrxjs.io/operators/combination/forkjoin.html
+
 
 `
 ex) zip(Rx.observable.of([1, 2, 3]), Rx.observable.of(4, 5, 6)), forkJoin(Rx.observable.of([1, 2, 3]), Rx.observable.of(4, 5, 6).delay(2000)) 
 `
+
 
 Example of) catchError and Retry -> ovservable.catch((e) => errorHandle(e)).retry(2)
 
 ## Rxjs Subject(relevant to hot cold observable, connect(), multicast etc)
 
  * It can be used in the same way with Observables, but it has more features such as code below
+
 
 `
 const subject = new Rx.subject()
@@ -51,7 +54,9 @@ setTimeout(() => {
 // from subA: First Value, from subB: First Value => from SubB: Next Value, from subB: Next Value  
 `
 
+
  * It can be used operator multicast() -> That pass values to multiple subscribers except multiple same side effects
+ 
  
  `
  const observable = Rx.observable.fromEvent(document, "click");
@@ -65,14 +70,12 @@ setTimeout(() => {
  
  subject.connect(); -> subA, SubB -> show same value
  
- -> 
- 
- Click One Time, subA: ${timeStamp}, subB: ${timeStamp} =>  Click One Time, subA: ${otherTimeStamp}, subB: ${otherTimeStamp} 
+// Click One Time, subA: ${timeStamp}, subB: ${timeStamp} =>  Click One Time, subA: ${otherTimeStamp}, subB: ${otherTimeStamp} 
  (show side effect message just once for each event) 
  
  `
  
-
+ 
 ## RXJS link(Some are deprecated, but still useful, compare them with official api)
 
  * https://rxjs-dev.firebaseapp.com/api/index/from

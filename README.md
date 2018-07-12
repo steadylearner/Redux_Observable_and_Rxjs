@@ -1,10 +1,10 @@
 # Redux_Observable_and_Rxjs
 
-[timer, takeuntil, takelast, take], 
-[delay, retry, catchError],
-[debounce <-> throttle, distintUntilChanged, switch(Map)], 
-[combineLaetst(combine streams(observable) from two distint elements, similar to zip ]
-
+* [timer, takeuntil, takelast, take] 
+* [delay, retry, catchError]
+* [debounce <-> throttle, distintUntilChanged, switch(Map)] 
+* [combineLaetst(combine streams(observable) from two distint elements, similar to zip ]
+* [finally, subsrcibe, unsubscribe]
 
 ## RXJS link(Some are deprecated, but still useful, compare them with official api)
 

@@ -1,5 +1,7 @@
 # Redux_Observable_and_Rxjs
 
+Just to save what I learn from them.
+
 ## Operators
 
 * [tap -> to debug, side effects etc(console, alert etc), doesn't affect event stream]

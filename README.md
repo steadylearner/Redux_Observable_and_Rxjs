@@ -26,6 +26,14 @@
  * https://medium.com/@mutebg/learn-rxjs-by-examples-c56bf481bec2
  * https://medium.com/@mohandere/rxjs-5-in-5-minutes-1c3b4ed0d8cc
 
+ ### Video Courses
+ 
+ * https://egghead.io/courses/asynchronous-programming-the-end-of-the-loop
+ 
+ ### Practice
+ 
+ * https://medium.com/@mutebg/learn-rxjs-by-examples-c56bf481bec2
+ 
 ### Object
 
  1. delay for specific time and cancel when data fetch end(timer + takeuntil), cancel next element with autoplay(takeuntil)

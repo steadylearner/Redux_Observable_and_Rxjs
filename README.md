@@ -33,5 +33,5 @@
  
 ### Next 
 
- 1. Learn graphql and backend
- 2. Use it with rxjs and redux
+ 1. Learn graphql and backend and Use it with rxjs and redux
+ 2. Refactor app and make not found message at first render and refresh, delay showing loading component  

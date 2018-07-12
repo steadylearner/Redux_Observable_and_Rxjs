@@ -48,6 +48,7 @@ ovservable.catch((e) => errorHandle(e)).retry(2)
 
 
 `
+
 const subject = new Rx.subject()
 
 const subA = subject.subsrcibe((val) => from subA: print(val));
@@ -57,6 +58,7 @@ subject.next("First Value")
 setTimeout(() => {
    subject.next("Next Value")
 }, 1000)
+
  
 // from subA: First Value, from subB: First Value => from SubB: Next Value, from subB: Next Value  
 `
@@ -66,6 +68,7 @@ setTimeout(() => {
  
  
  `
+ 
  const observable = Rx.observable.fromEvent(document, "click");
  
  const click = observable.do( _ => print("click one time"));
@@ -79,6 +82,7 @@ setTimeout(() => {
  
 // Click One Time, subA: ${timeStamp}, subB: ${timeStamp} =>  Click One Time, subA: ${otherTimeStamp}, subB: ${otherTimeStamp} 
  (show side effect message just once for each event) 
+ 
  
  `
  

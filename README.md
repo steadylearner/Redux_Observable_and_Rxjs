@@ -42,14 +42,14 @@ ovservable.catch((e) => errorHandle(e)).retry(2)
 `
 
 
+
 ## Rxjs Subject(relevant to hot cold observable, connect(), multicast etc)
 
  * It can be used in the same way with Observables, but it has more features such as code below
-
+ * It can be used operator multicast() -> That pass values to multiple subscribers except multiple same side effects
 
 `
-
-const subject = new Rx.subject()
+ const subject = new Rx.subject()
 
 const subA = subject.subsrcibe((val) => from subA: print(val));
 const subB = subject.subsrcibe((val) => from subB: print(val));
@@ -59,15 +59,7 @@ setTimeout(() => {
    subject.next("Next Value")
 }, 1000)
 
- 
-// from subA: First Value, from subB: First Value => from SubB: Next Value, from subB: Next Value  
-`
-
-
- * It can be used operator multicast() -> That pass values to multiple subscribers except multiple same side effects
- 
- 
- `
+ -> from subA: First Value, from subB: First Value => from SubB: Next Value, from subB: Next Value
  
  const observable = Rx.observable.fromEvent(document, "click");
  
@@ -80,13 +72,11 @@ setTimeout(() => {
  
  subject.connect(); -> subA, SubB -> show same value
  
-// Click One Time, subA: ${timeStamp}, subB: ${timeStamp} =>  Click One Time, subA: ${otherTimeStamp}, subB: ${otherTimeStamp} 
+-> Click One Time, subA: ${timeStamp}, subB: ${timeStamp} =>  Click One Time, subA: ${otherTimeStamp}, subB: ${otherTimeStamp} 
  (show side effect message just once for each event) 
- 
- 
- `
- 
- 
+`
+
+
 ## RXJS link(Some are deprecated, but still useful, compare them with official api)
 
  * https://rxjs-dev.firebaseapp.com/api/index/from

@@ -18,14 +18,14 @@
 * [catchError -> similar to handle error in promise]
 * [retry -> used for error handle with catchError, execute code until specific time of error happens again]
 
-Example of) combineLatest and zip compare
+* combineLatest and zip compare
 
 `
 endpoint_stream.combineLatest(id_stream) / only one of them is necessary -> map(data => makeRequest(data[0], data[1])
 endpoint_stream.zip(id_stream) / both of them are required -> map(data => makeRequest(data[0], data[1])
 `
 
-Example of) zip and forkJoin compare(forkJoin should be used with caution, similar to Promise.all), -> https://www.learnrxjs.io/operators/combination/forkjoin.html
+* zip and forkJoin compare(forkJoin should be used with caution, similar to Promise.all), -> https://www.learnrxjs.io/operators/combination/forkjoin.html
 
 
 `
@@ -33,7 +33,12 @@ ex) zip(Rx.observable.of([1, 2, 3]), Rx.observable.of(4, 5, 6)), forkJoin(Rx.obs
 `
 
 
-Example of) catchError and Retry -> ovservable.catch((e) => errorHandle(e)).retry(2)
+* catchError and Retry 
+
+`
+ovservable.catch((e) => errorHandle(e)).retry(2)
+`
+
 
 ## Rxjs Subject(relevant to hot cold observable, connect(), multicast etc)
 

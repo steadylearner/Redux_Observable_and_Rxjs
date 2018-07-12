@@ -6,7 +6,7 @@
 [combineLaetst(combine streams(observable) from two distint elements, similar to zip ]
 
 
-## RXJS LINK(Some are deprecated, but still useful, compare with curruent official api)
+## RXJS link(Some are deprecated, but still useful, compare them with official api)
 
  * https://rxjs-dev.firebaseapp.com/api/index/from
  * https://www.learnrxjs.io/

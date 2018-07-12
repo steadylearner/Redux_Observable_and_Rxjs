@@ -2,7 +2,7 @@
 
 * [timer, takeuntil, takelast, take] 
 * [delay, retry, catchError]
-* [debounce <-> throttle, distintUntilChanged, switch(Map)] 
+* [debounce <-> throttle, distintUntilChanged, switch(Map), mergemap, map, mapto] 
 * [combineLaetst(combine streams(observable) from two distint elements, similar to zip ]
 * [finally, subsrcibe, unsubscribe]
 

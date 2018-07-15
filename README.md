@@ -10,7 +10,7 @@ Just to save what I learn from them.
 * [retry, catchError]
 * [debounce <-> throttle, distintUntilChanged, switch(Map), mergemap, map, mapto] 
 * [combineLaetst(combine streams(observable) from two distint elements, similar to use zip in this case]
-* [finally <-> startWith? subsrcibe, unsubscribe]
+* [finally, endWith <-> startWith, subsrcibe, unsubscribe]
 * [scan(similar to javascript array reduce)]
 * [switchMap -> take only last observables available]
 * [takeUntil -> unsubscribe observables that doesn't have unsubcribe method, used instead of unsubscribe, assert with value]
